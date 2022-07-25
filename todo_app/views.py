@@ -2,7 +2,7 @@ from rest_framework import generics
 from .models import Task
 from .serializers import CreateTaskSerializer, ListTaskSerializer, ChangeTaskSerializer
 from django_filters import rest_framework as filters
-
+from .permissions import ChangePermission
 
 class CreateTask(generics.CreateAPIView):
     queryset = Task.objects.all()
@@ -30,3 +30,5 @@ class ListTask(generics.ListAPIView):
 class ChangeTask(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = ChangeTaskSerializer
+    permission_classes = [ChangePermission]
+

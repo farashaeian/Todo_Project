@@ -89,7 +89,7 @@ DATABASES = {
 
         'NAME': 'todo_db',
 
-        'USER': 'postgres',
+        'USER': 'zahra',
 
         'PASSWORD': '1234',
 

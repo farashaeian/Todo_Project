@@ -11,7 +11,7 @@ class CreateTaskSerializer(serializers.ModelSerializer):
 class ListTaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        exclude = ['id']
+        fields = '__all__'
 
 
 class ChangeTaskSerializer(serializers.ModelSerializer):
